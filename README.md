@@ -7,7 +7,7 @@ This repository contains a Full Stack Developer assignment solution for ArBa Dev
 - Backend :: https://arba-assignment-cxzg.onrender.com
 
 ## Note
-- Both Frontend and Backend is Deplyed on free deployment sites, backend maybe take less than 1 min to start working.
+- Both Frontend and Backend is Deployed on free deployment sites, backend maybe take less than 1 min to start working.
 
 ## Backend API
 
