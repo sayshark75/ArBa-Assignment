@@ -14,24 +14,25 @@ The backend API provides the following routes:
 
 ### User Routes
 
-- `/api/users/update-profile`: POST - Update user profile (fullName, avatar).
+- `/api/users/update-fullName`: POST - Update user profile (fullName).
+- `/api/users/update-avatar`: POST - Update user profile (avatar).
 - `/api/users/change-password`: POST - Change user password.
 
 ### Category Routes
 
 - `/api/categories/create`: POST - Create a new category.
-- `/api/categories/update/:categoryId`: PUT - Update a category.
-- `/api/categories/delete/:categoryId`: DELETE - Delete a category.
-- `/api/categories/:categoryId`: GET - Get details of a specific category.
+- `/api/categories/update`: PATCH - Update a category.
+- `/api/categories/delete?id=`: DELETE - Delete a category.
+- `/api/categories?id=`: GET - Get details of a specific category.
 - `/api/categories`: GET - Get a list of all categories.
 
 ### Product Routes
 
 - `/api/products/create`: POST - Create a new product.
-- `/api/products/update/:productId`: PUT - Update a product.
+- `/api/products/update`: PATCH - Update a product.
 - `/api/products/delete`: DELETE - Delete one or more products.
-- `/api/products/:productId`: GET - Get details of a specific product.
-- `/api/products`: GET - Get a list of products. Supports filtering by category and sorting by price.
+- `/api/products?id`: GET - Get details of a specific product.
+- `/api/products/user-prod?sort=asc|desc&category=`: GET - Get a list of products. Supports filtering by category and sorting by price.
 
 ### Additional Features
 
