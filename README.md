@@ -2,6 +2,13 @@
 
 This repository contains a Full Stack Developer assignment solution for ArBa Development Studio. The assignment involves building a backend API using Express.js, TypeScript, and Mongoose for a fictional e-commerce platform. Additionally, there is a frontend application built using Next.js 14 and TypeScript to interact with the backend API.
 
+## Deployments
+- Frontend :: https://arba-assignment-beta.vercel.app
+- Backend :: https://arba-assignment-cxzg.onrender.com
+
+## Note
+- Both Frontend and Backend is Deplyed on free deployment sites, backend maybe take less than 1 min to start working.
+
 ## Backend API
 
 The backend API provides the following routes:
