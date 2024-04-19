@@ -5,8 +5,8 @@ import Navbar from "@/components/Navigation/Navbar";
 import { fonts } from "@/fonts/fonts";
 
 export const metadata: Metadata = {
-  title: "Nextjs Boilerplate",
-  description: "Boilerplate made using NextJs, Chakra UI, Typescript, ReactIcons",
+  title: "ArBa Assignment",
+  description: "Assignment from ArBa Dvelopment Studio",
 };
 
 export default function RootLayout({

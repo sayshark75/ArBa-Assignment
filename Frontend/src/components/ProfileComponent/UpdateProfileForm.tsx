@@ -19,6 +19,7 @@ import CustomTextInput from "../CustomInputs/CustomTextInput";
 import CustomPasswordInput from "../CustomInputs/CustomPasswordInput";
 import { useRouter } from "next/navigation";
 import { UpdateProfileFormDataType } from "@/TYPES";
+import { updateProfileNameApi } from "@/api/user_api";
 
 const UpdateProfileForm = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,23 +35,23 @@ const UpdateProfileForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      // const data = await registerApi(formData);
-      // if (!data.status) {
-      //   toast({
-      //     title: data.error.message,
-      //     status: "error",
-      //     duration: 3000,
-      //     isClosable: true,
-      //   });
-      // } else {
-      //   toast({
-      //     title: data.message,
-      //     status: "success",
-      //     duration: 3000,
-      //     isClosable: true,
-      //   });
-      //   router.push("/login");
-      // }
+      const data = await updateProfileNameApi({ fullName: name });
+      if (!data.status) {
+        toast({
+          title: data.error.message,
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: data.message,
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        router.refresh();
+      }
     } catch (error) {
       console.log("error: ", error);
     }
