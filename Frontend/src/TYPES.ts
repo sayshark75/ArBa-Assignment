@@ -13,10 +13,11 @@ export interface CustomInputType {
 
 export interface CustomButtonType {
   title: string;
-  onClick?: () => void;
+  onClick?: (bool?: any) => void;
   type?: "button" | "submit" | "reset" | undefined;
   form?: string;
   rounded?: string;
+  maxW?: string;
 }
 
 export interface LoginFormDataType {

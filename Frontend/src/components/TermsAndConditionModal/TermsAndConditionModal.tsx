@@ -15,16 +15,18 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 
-const TermsAndConditionModal = () => {
+const TermsAndConditionModal = ({ show, setShowTC }: { show: boolean; setShowTC: (bool?: boolean) => void }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleCancel = () => {
     localStorage.setItem("tc-popup", "false");
     onClose();
+    setShowTC(false);
   };
   const handleAccept = () => {
     localStorage.setItem("tc-popup", "true");
     onClose();
+    setShowTC(false);
   };
   useEffect(() => {
     const hideModal = JSON.parse(localStorage.getItem("tc-popup") || "false");
@@ -33,7 +35,7 @@ const TermsAndConditionModal = () => {
     }
   }, [onOpen]);
   return (
-    <Modal isOpen={isOpen} onClose={() => {}} size={"xl"}>
+    <Modal isOpen={show || isOpen} onClose={() => {}} size={"xl"}>
       <ModalOverlay />
       <ModalContent rounded={"0"}>
         <ModalHeader>
